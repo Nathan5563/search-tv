@@ -1,7 +1,6 @@
 const form = document.querySelector(".form");
 const cont = document.querySelector(".container");
 const row = document.querySelector("#row");
-const p = document.querySelector("#resultdesc")
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -9,8 +8,6 @@ form.addEventListener("submit", e => {
         row.removeChild(row.lastChild);
     }
     const searchTerm = document.querySelector("#query").value;
-    p.innerHTML = `Showing results for "${searchTerm}"`
-    form.elements.query.value = '';
     axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
     .then(res => {
         try {
@@ -26,8 +23,6 @@ form.addEventListener("submit", e => {
                 } else {
                     searchResultImage.src = "https://placehold.co/210x295";
                 }
-
-                searchResultText.classList.add("text-wrap")
 
                 searchResult.append(searchResultImage);
                 searchResult.append(searchResultText);

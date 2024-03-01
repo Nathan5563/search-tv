@@ -9,29 +9,21 @@
     <title>TV Search</title>
 </head>
 <body class="text-white">
-    <nav class="p-3 d-flex" id="nav">
-        <img src="./pngtree-color-old-tv-video-logo-image_1356700-removebg-preview.png" alt="tv logo" class="">
-        <span class="fs-1">TV Time</span>
-        <div class="d-flex fs-5 ms-5 mt-3">
-            <a href="" class="me-5 text-white">Browse</a>
-            <a href="" class="me-5 text-white">Latest</a>
-            <a href="" class="me-5 text-white">Genre</a>
-        </div>
-        <form class="form d-flex w-50 ms-auto" role="search" autocomplete="off">
-            <div class="input-group">
-                <input class="form-control" id="query" type="search" placeholder="Enter keywords..." aria-label="Search">
-                <span class="input-group-text">
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass text-white"></i>
-                    </button>
-                </span>
-            </div>
-        </form>
-    </nav>
+    <div class="logo d-flex justify-content-center">
+        <img src="./pngtree-color-old-tv-video-logo-image_1356700-removebg-preview.png" alt="tv logo">
+    </div>
+    <div class="title text-white fs-1 d-flex justify-content-center mb-5">TV Time</div>
 
-    <h2 id="resultdesc" class="ms-5 mt-5 cat-heading">
-        
-    </h2>
+    <form class="form d-flex justify-content-center m-3" role="search">
+        <div class="input-group w-75">
+            <input class="form-control p-3" id="query" type="search" placeholder="Enter keywords..." aria-label="Search">
+            <span class="input-group-text bg-success">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass text-white"></i>
+                </button>
+            </span>
+        </div>
+    </form>
 
     <div class="container ms-3 min-vw-100 mt-5 d-flex">
         <div class="d-flex flex-wrap" id="row">
